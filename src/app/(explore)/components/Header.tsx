@@ -19,14 +19,14 @@ function Header() {
         {/* Contact Section - Visible only on Desktop */}
         <div className="flex">
           <Link href="https://www.spacez.co/" passHref>
-            <div className="mobile:hidden border-2 mx-2 my-1 bg-white border-[#4f3c31] rounded-full p-3 py-2 px-6 flex items-center space-x-2 cursor-pointer">
+            <div className="mobile:hidden border-2 mx-2 my-1 bg-white border-[#4f3c31] rounded-full p-3 py-3 px-5 flex items-center space-x-2 cursor-pointer">
               <span className="text-lg font-medium px-2 text-[#4f3c31]  leading-none">
                 Book a Villa Now
               </span>
             </div>
           </Link>
           <Link href="https://wa.me/9380834941" passHref>
-            <div className="mobile:hidden border-2 bg-white border-[#4f3c31] rounded-full p-3 py-2 px-6 flex items-center space-x-2 cursor-pointer">
+            <div className="mobile:hidden border-2 bg-white border-[#4f3c31] rounded-full p-3 py-3 px-4 flex items-center space-x-2 cursor-pointer">
               <FaWhatsapp className="text-[#4f3c31] align-middle" size={22} />
               <span className="text-lg font-medium px-2 text-[#4f3c31]  leading-none">
                 9380834941

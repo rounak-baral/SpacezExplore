@@ -73,6 +73,9 @@ const config: Config = {
       mobile: {
         max: "475px",
       },
+      smob: {
+        max: "398px",
+      }
     },
   },
   

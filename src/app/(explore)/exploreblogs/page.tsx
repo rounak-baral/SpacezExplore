@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import cafesData from "../../data.json"; // Ensure you have your JSON data here
 import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa6";
+import { Footer } from "../components/Footer";
 
 // Define types for TypeScript
 type CafeOrRestaurant = {
@@ -42,7 +43,6 @@ type CafesData = {
   winebars: CafeOrRestaurant[];
   teahouses: CafeOrRestaurant[];
   fastfoodchains: CafeOrRestaurant[];
-
 };
 
 const cafesDataJson = cafesData as CafesData;
@@ -56,7 +56,8 @@ function ExploreBlogsContent() {
   // Determine the category and select the data accordingly
   const category = searchParams.get("category")?.toLowerCase() || "cafes"; // Default to "cafes" if no category provided
   const sectionIndex = parseInt(searchParams.get("section") || "0", 10); // Get the section index
-  const data = cafesDataJson[category as keyof CafesData] || cafesDataJson.cafes;
+  const data =
+    cafesDataJson[category as keyof CafesData] || cafesDataJson.cafes;
   // Function to render stars based on rating
   const renderStars = (rating: number) => {
     const fullStars = Math.floor(rating); // Full stars count
@@ -95,8 +96,31 @@ function ExploreBlogsContent() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = sectionsRef.current.indexOf(entry.target as HTMLDivElement);
+            const index = sectionsRef.current.indexOf(
+              entry.target as HTMLDivElement
+            );
             setActiveIndex(index);
+
+            // Scroll the slider to bring the active box into full view
+            const slider = sliderRef.current;
+            const activeBox = slider?.children[index] as HTMLElement;
+            if (activeBox && slider) {
+              const sliderWidth = slider.clientWidth; // Visible width of the slider
+              const boxLeft = activeBox.offsetLeft; // Left position of the active box
+              const boxWidth = activeBox.offsetWidth; // Width of the active box
+              const scrollLeft = slider.scrollLeft; // Current scroll position of the slider
+
+              // If the box is not fully visible, adjust the scroll position
+              if (
+                boxLeft < scrollLeft ||
+                boxLeft + boxWidth > scrollLeft + sliderWidth
+              ) {
+                slider.scrollTo({
+                  left: boxLeft - sliderWidth / 2 + boxWidth / 2,
+                  behavior: "smooth",
+                });
+              }
+            }
           }
         });
       },
@@ -121,6 +145,27 @@ function ExploreBlogsContent() {
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "center" });
       setActiveIndex(index);
+
+      // Scroll the slider to bring the active box into full view
+      const slider = sliderRef.current;
+      const activeBox = slider?.children[index] as HTMLElement;
+      if (activeBox && slider) {
+        const sliderWidth = slider.clientWidth; // Visible width of the slider
+        const boxLeft = activeBox.offsetLeft; // Left position of the active box
+        const boxWidth = activeBox.offsetWidth; // Width of the active box
+        const scrollLeft = slider.scrollLeft; // Current scroll position of the slider
+
+        // If the box is not fully visible, adjust the scroll position
+        if (
+          boxLeft < scrollLeft ||
+          boxLeft + boxWidth > scrollLeft + sliderWidth
+        ) {
+          slider.scrollTo({
+            left: boxLeft - sliderWidth / 2 + boxWidth / 2,
+            behavior: "smooth",
+          });
+        }
+      }
     }
   };
 
@@ -131,7 +176,8 @@ function ExploreBlogsContent() {
         className={`flex flex-row items-center overflow-x-auto mobile:mb-8 mb-16 shadow-md border-b-[#eaeaea] px-2 py-4 sticky top-24 z-10 bg-white transition-colors duration-300`}
       >
         <h2 className="text-3xl flex w-[30%] items-center font-semibold text-[#342A28] text-left tab:text-2xl mobile:hidden">
-        {`${category.charAt(0).toUpperCase() + category.slice(1)} Collection`}        </h2>
+          {`${category.charAt(0).toUpperCase() + category.slice(1)} Collection`}{" "}
+        </h2>
         <div
           ref={sliderRef}
           className="flex items-center mobile:w-auto w-full overflow-x-auto space-x-4 mobile:pl-2"
@@ -139,8 +185,10 @@ function ExploreBlogsContent() {
           {data.map((_, index) => (
             <div
               key={index}
-              className={`flex-none mobile:w-20 mobile:h-20 w-24 h-24 rounded-md overflow-hidden cursor-pointer border-4 ${
-                activeIndex === index ? "border-[#9a7b4f] shadow-md" : "border-transparent opacity-60"
+              className={`flex-none mobile:w-16 mobile:h-16 mt-2 w-24 h-24 rounded-md overflow-hidden cursor-pointer border-4 ${
+                activeIndex === index
+                  ? "border-[#9a7b4f] shadow-md"
+                  : "border-transparent opacity-60"
               }`}
               onClick={() => handleBoxClick(index)}
             >
@@ -155,7 +203,10 @@ function ExploreBlogsContent() {
       </div>
 
       <h2 className="text-5xl text-[#342A28] font-semibold flex w-full justify-center items-center mobile:mb-8 mb-24 tab:text-4xl mobile:text-3xl">
-      {`Top Places for ${category.charAt(0).toUpperCase() + category.slice(1)} Lovers`}      </h2>
+        {`Top Places for ${
+          category.charAt(0).toUpperCase() + category.slice(1)
+        } Lovers`}{" "}
+      </h2>
 
       {/* Blog Content */}
       {data.map((item, index) => (
@@ -181,23 +232,34 @@ function ExploreBlogsContent() {
             />
           </div>
           {/* Text Content */}
-          <div className="w-[50%] h-full mobile:w-full tab:w-full mobile:p-1 p-6">
-            <h1 className="text-3xl font-semibold mb-2 text-[#342A28]">{item.name}</h1>
-            <p className="text-lg font-normal text-[#9a7b4f] mb-4">{item.address}</p>
-            <p className="text-lg font-normal text-[#000000] mb-4 leading-relaxed tab:text-lg mobile:text-base">
+          <div className="w-[50%] h-full mobile:w-full tab:w-full mobile:p-2 p-6 bg-white rounded-lg">
+            <h1 className="text-3xl mobile:text-xl font-bold mb-2 text-[#342A28]">
+              {item.name}
+            </h1>
+            <p className="text-lg font-medium text-[#9a7b4f] underline mb-4">
+              {item.address}
+            </p>
+            <p className="text-lg font-light text-[#000000] mb-4 leading-relaxed tab:text-lg mobile:text-base">
               {item.description}
             </p>
             <div className="flex items-center mb-2">
-              <p className="text-lg font-semibold text-[#342A28] mr-2">Rating:</p>
+              <p className="text-lg mobile:text-base font-semibold text-[#584139] mr-2">
+                Rating:
+              </p>
               {renderStars(item.rating)}
             </div>
-            <p className="text-lg font-semibold text-[#342A28] mb-2">Price for Two: {item.price_for_two}</p>
-            <p className="text-lg font-semibold text-[#342A28] mb-2">
-              Speciality: {item.speciality.join(", ")}
+            <p className="text-lg  mobile:text-base font-medium text-[#584139] mb-2">
+              <span className="font-semibold">Price for Two:</span>{" "}
+              {item.price_for_two}
+            </p>
+            <p className="text-lg mobile:text-base font-medium text-[#584139] mb-2">
+              <span className="font-semibold">Speciality:</span>{" "}
+              {item.speciality.join(", ")}
             </p>
           </div>
         </div>
       ))}
+       <Footer />
     </div>
   );
 }

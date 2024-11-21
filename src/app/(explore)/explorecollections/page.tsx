@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { Footer } from "../components/Footer";
 
 function ExploreCollection() {
   const [activeTab, setActiveTab] = useState("city");
@@ -108,6 +109,7 @@ function ExploreCollection() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

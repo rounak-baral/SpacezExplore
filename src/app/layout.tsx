@@ -39,6 +39,7 @@ export default function RootLayout({
         <main className={urbanist.className}>
           {children}
         </main>
+       
       </body>
     </html>
   );
