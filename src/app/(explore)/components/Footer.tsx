@@ -1,54 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
-
-// const footerItems = [
-//   {
-//     item1: "For Guest",
-//     item2: {
-//       href: "/",
-//       label: "Explore all spaces",
-//     },
-//     item3: {
-//       href: "/booking-rules",
-//       label: "Booking Rules",
-//     },
-//     item4: {
-//       href: "/booking-rules",
-//       label: "Cancellation and Refund",
-//     },
-//   },
-//   {
-//     item1: "About Spacez",
-//     item2: {
-//       href: "/about",
-//       label: "About",
-//     },
-//     item3: {
-//       href: "/",
-//       label: "Blog",
-//     },
-//     item4: {
-//       href: "/",
-//       label: "Careers",
-//     },
-//   },
-//   {
-//     item1: "Support",
-//     item2: {
-//       href: "/contact",
-//       label: "Contact Us",
-//     },
-//     item3: {
-//       href: "/privacy-policy",
-//       label: "Privacy Policy",
-//     },
-//     item4: {
-//       href: "/terms-and-conditions",
-//       label: "Terms and Condition",
-//     },
-//   },
-// ];
+import { LabelText } from "../common/label-text";
+import { TitleText } from "../common/title-text";
+import { PopularSearches } from "./popular-searches";
 
 const company = [
   {
@@ -86,48 +41,54 @@ const support = [
     text: "contact",
     link: "/contact",
   },
-  // {
-  //  text: "download app",
-  //  link: "/spacezapp",
-  // },
+];
+
+const contact = [
+  {
+    link: "#",
+    text: "hello@spacez.co",
+  },
+  {
+    link: "#",
+    text: "call us: +91 860 8600 718",
+  },
+  {
+    link: "#",
+    text: "address: 62/1, 9th Main Rd, Stage 2, Eshwara Layout, Indiranagar, Bengaluru, Karnataka 560038",
+  },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#F5F3F2] overflow-x-hidden h-[588px] mobile:h-auto pt-24 mobile:pt-[50px] pb-12 mobile:pb-[50px]">
-      <div className="px-[100px] mobile:px-[30px] w-full flex mobile:flex-col justify-between mobile:justify-normal h-[275px] mobile:h-auto">
+    <footer className="bg-[#F5F3F2] overflow-x-hidden w-full h-auto mobile:h-auto pt-24 mobile:pt-[50px] pb-12 mobile:pb-[50px]">
+      <div className="px-[75px] mobile:px-[40px] w-full flex mobile:flex-col justify-between mobile:justify-normal h-[275px] mobile:h-auto">
         <div className="flex flex-col gap-y-6 mobile:justify-normal mobile:gap-y-5 mobile:w-full mobile:pt-6 mobile:pb-12 w-[400px]">
           <Image
-            className="object-cover h-[45px] w-[200px] mobile:w-[200px] mobile:h-[45px]"
+            className="object-cover h-[46px] w-[175px] mobile:w-[175px] mobile:h-[45px]"
             width={500}
             height={500}
-            src="https://res.cloudinary.com/dz3tveb47/image/upload/v1726815168/spacez-header-logo_l86q9c.png"
+            src="https://res.cloudinary.com/dz3tveb47/image/upload/v1728571285/spacez_logo_btftvj.png"
             alt="Logo"
           />
-          <span
-            style={{ fontWeight: 300 }}
-            className="font-[Sansation] mobile:text-justify text-[18px] leading-[20px] text-[#442208]"
-          >
-            Your journey to prime urban escapes and luxury stays begins with
-            Spacez. Discover our homestays, hostels, and luxe hotels across
-            India’s most sought-after locations. Your next profitable adventure
-            awaits.
-          </span>
+          <LabelText className="text-primaryB7 mobile:!font-normal mobile:!text-[14px]">
+            the page ends here, but your journey to prime urban escapes and
+            luxury stays begins with spacez. discover our homestays, hostels,
+            and luxe hotels across india&apos;s most sought-after locations.
+            your next profitable adventure awaits you.
+          </LabelText>
         </div>
 
         <div className="flex mobile:flex-col mobile:gap-y-4 gap-x-6 mobile:gap-x-0">
           <div className="w-[130px] flex flex-col gap-y-6 mobile:gap-y-3">
-            <h4 className="font-[Sansation] text-[#442208] text-[20px] mobile:text-[18px] font-medium mobile:font-normal">
+            <TitleText className="text-[16px] font-semibold text-neutralN7">
               spacez
-            </h4>
-            <div className="flex flex-col gap-y-4 mobile:gap-y-2">
-              {company.map((item) => (
-                <Link
-                  className="font-[Sansation] text-[#694B36] text-[16px] mobile:text-[12px] font-normal leading-[17.5px]"
-                  href={item.link}
-                  key={item.link}
-                >
-                  {item.text}
+            </TitleText>
+            <div className="flex flex-col">
+              {company.map((item, index) => (
+                <Link href={item.link} key={item.link + index}>
+                  <LabelText className="text-neutralN8 mobile:!font-normal mobile:!text-[14px]">
+                    {item.text}
+                  </LabelText>
                 </Link>
               ))}
             </div>
@@ -136,50 +97,45 @@ export const Footer = () => {
           <div className="hidden mobile:block bg-[#BCA390] w-full h-[0.5px]" />
 
           <div className="w-[130px] flex flex-col gap-y-6 mobile:gap-y-3">
-            <h4 className="font-[Sansation] text-[#442208] text-[20px] mobile:text-[18px] font-medium mobile:font-normal">
+            <TitleText className="text-[16px] font-semibold text-neutralN7">
               support
-            </h4>
-            <div className="flex flex-col gap-y-4 mobile:gap-y-1">
-              {support.map((item) => (
-                <Link
-                  className="font-[Sansation] text-[#694B36] text-[16px] mobile:text-[12px] font-normal leading-[17.5px]"
-                  href={item.link}
-                  key={item.link}
-                >
-                  {item.text}
+            </TitleText>
+            <div className="flex flex-col">
+              {support.map((item, index) => (
+                <Link href={item.link} key={item.link + index}>
+                  <LabelText className="text-neutralN8 mobile:!font-normal mobile:!text-[14px]">
+                    {item.text}
+                  </LabelText>
                 </Link>
               ))}
-              <a
-                className="font-[Sansation] text-[#694B36] text-[16px] mobile:text-[12px] font-normal leading-[17.5px]"
-                href="/spacezapp"
-              >
-                download app
+              <a href="/spacezapp">
+                <LabelText className="text-neutralN8 mobile:!font-normal mobile:!text-[14px]">
+                  download app
+                </LabelText>
               </a>
             </div>
           </div>
 
           <div className="hidden mobile:block bg-[#BCA390] w-full h-[0.5px]" />
 
-          <div className="flex flex-col gap-y-5 mobile:gap-y-3 w-[200px]">
-            <h4 className="font-[Sansation] text-[#442208] text-[20px] mobile:text-[18px] font-medium mobile:font-normal">
+          <div className="flex flex-col gap-y-6 mobile:gap-y-3 w-[200px]">
+            <TitleText className="text-[16px] font-semibold text-neutralN7">
               contact
-            </h4>
-            <p className="font-[Sansation] text-[#442208] text-[16px] mobile:text-[12px] font-bold">
-              hello@spacez.co
-            </p>
-            <p className="font-[Sansation] text-[#442208] text-[16px] mobile:text-[12px] font-bold">
-              <span className="font-normal">call us:</span>
-              <a href="tel:+918608600718" className="text-black">
-                +91 860 8600 718
-              </a>
-            </p>
-            <p className="font-[Sansation] text-[#442208] text-[16px] mobile:text-[12px] font-bold">
-              <span className="font-normal">address:</span> 62/1, 9th Main Rd,
-              Stage 2, Eshwara Layout, Indiranagar, Bengaluru, Karnataka 560038
-            </p>
+            </TitleText>
+            <div className="flex flex-col gap-y-3 mobile:gap-y-2">
+              {contact.map((item, index) => (
+                <Link href={item.link} key={item.link + index}>
+                  <LabelText className="text-neutralN8 mobile:!font-normal mobile:!text-[14px]">
+                    {item.text}
+                  </LabelText>
+                </Link>
+              ))}
+            </div>
           </div>
 
-          <div className="hidden mobile:block bg-[#BCA390] w-full h-[0.5px]" />
+          <div className="hidden mobile:block">
+            <PopularSearches />
+          </div>
 
           <div className="hidden pt-4 pb-6 mobile:flex justify-center items-center">
             <SocialMedia />
@@ -187,25 +143,10 @@ export const Footer = () => {
 
           <div className="px-12 mobile:px-0 mobile:py-[20px]">
             <div className="flex items-center flex-col gap-y-4">
-              <span className="font-[Sansation] font-bold text-[18px] leading-[20px] text-[#442208]">
+              <TitleText className="text-neutralN7 lowercase !text-[16px] !font-semibold">
                 Download our app
-              </span>
-              <div className="relative h-[180px] w-[180px] mobile:hidden">
-                <Image
-                  className="w-full h-full object-cover"
-                  width={1000}
-                  height={1000}
-                  src="https://res.cloudinary.com/dz3tveb47/image/upload/v1726815164/qr-code_d41kjt.png"
-                  alt="QR code"
-                />
-                <Image
-                  className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[35px] h-[35px] object-cover"
-                  width={1000}
-                  height={1000}
-                  src="https://res.cloudinary.com/dz3tveb47/image/upload/v1726815167/spacez-footer-logo_t9wfhk.png"
-                  alt="QR code"
-                />
-              </div>
+              </TitleText>
+
               <div className="flex items-center gap-x-4">
                 <Link href="https://play.google.com/store/apps/details?id=com.spacez.luxe">
                   <Image
@@ -226,6 +167,23 @@ export const Footer = () => {
                   />
                 </Link>
               </div>
+
+              <div className="relative h-[180px] w-[180px] mobile:hidden">
+                <Image
+                  className="w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
+                  src="https://res.cloudinary.com/dz3tveb47/image/upload/v1726815164/qr-code_d41kjt.png"
+                  alt="QR code"
+                />
+                <Image
+                  className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[35px] h-[35px] object-cover"
+                  width={1000}
+                  height={1000}
+                  src="https://res.cloudinary.com/dz3tveb47/image/upload/v1726815167/spacez-footer-logo_t9wfhk.png"
+                  alt="QR code"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -233,45 +191,48 @@ export const Footer = () => {
 
       <div className="hidden py-2 w-full mobile:flex flex-col items-center justify-center gap-y-3">
         <div className="flex items-center justify-center gap-x-4">
-          <a
+          <Link
             href="/privacy-policy"
             className="font-[Sansation] text-[#3F3B42] text-[14px] font-normal leading-[20.16px] text-left"
           >
             privacy policy
-          </a>
+          </Link>
           <div className="w-1 h-1 bg-[#3F3B42]" />
-          <a
+          <Link
             href="/terms-and-conditions"
             className="font-[Sansation] text-[#3F3B42] text-[14px] font-normal leading-[20.16px] text-left"
           >
             terms and conditions
-          </a>
+          </Link>
         </div>
-        <span className="font-[Sansation] font-normal text-[11px] leading-[15px]">
+        <LabelText className="text-primaryB5">
           ©2024 SPACEZ HOSPITALITY AND FOODS PRIVATE LIMITED.
-        </span>
+        </LabelText>
+      </div>
+
+      <div className="w-full px-[100px] mx-auto text-center flex flex-col items-center justify-center mobile:hidden">
+        <PopularSearches />
       </div>
 
       <div className="mobile:hidden mt-[100px] py-6 w-full border-t-[0.5px] border-[#B0B0B0]">
         <div className="px-[100px] flex items-center justify-between">
           <div className="flex items-center gap-x-4">
-            <span className="font-[Sansation] text-[#3F3B42] text-[14px] font-normal leading-[20.16px] text-left">
+            <LabelText className="text-neutralN8">
               ©2024 SPACEZ HOSPITALITY AND FOODS PRIVATE LIMITED.
-            </span>
+            </LabelText>
             <div className="w-1 h-1 bg-[#3F3B42]" />
             <a
               href="/privacy-policy"
               className="font-[Sansation] text-[#3F3B42] text-[14px] font-normal leading-[20.16px] text-left"
             >
-              privacy policy
+              <LabelText className="text-neutralN8">privacy policy</LabelText>
             </a>
             <div className="w-1 h-1 bg-[#3F3B42]" />
-            <a
-              href="/terms-and-conditions"
-              className="font-[Sansation] text-[#3F3B42] text-[14px] font-normal leading-[20.16px] text-left"
-            >
-              terms and conditions
-            </a>
+            <Link href="/terms-and-conditions">
+              <LabelText className="text-neutralN8">
+                terms and conditions
+              </LabelText>
+            </Link>
           </div>
           <SocialMedia />
         </div>
@@ -285,7 +246,7 @@ const SocialMedia = () => {
     <div className="flex items-center gap-x-2">
       <Link
         href="https://www.linkedin.com/company/spacezluxe/"
-        className="flex items-center justify-center w-[22px] h-[22px] bg-[#3F3B42] rounded-full"
+        className="flex items-center justify-center w-[22px] h-[22px] bg-primaryB7 rounded-full"
         target="_blank"
         rel="nofollow"
       >
@@ -293,7 +254,7 @@ const SocialMedia = () => {
       </Link>
       <Link
         href="https://wa.me/918608600718?text=Hi%20Spacez,%20I'm%20interested%20to%20know%20about%20something"
-        className="flex items-center justify-center w-[22px] h-[22px] bg-[#3F3B42] rounded-full"
+        className="flex items-center justify-center w-[22px] h-[22px] bg-primaryB7 rounded-full"
         target="_blank"
         rel="nofollow"
       >
@@ -301,7 +262,7 @@ const SocialMedia = () => {
       </Link>
       <Link
         href="https://www.instagram.com/spacez.luxe/"
-        className="flex items-center justify-center w-[22px] h-[22px] bg-[#3F3B42] rounded-full"
+        className="flex items-center justify-center w-[22px] h-[22px] bg-primaryB7 rounded-full"
         target="_blank"
         rel="nofollow"
       >
@@ -310,52 +271,3 @@ const SocialMedia = () => {
     </div>
   );
 };
-
-{
-  /* <div className="flex mobile:flex-col mobile:gap-y-14 mobile:items-center mobile:w-[320px] mx-auto gap-[290px]">
-    <h4 className="text-[17px] font-medium text-black">
-      Explore the new luxe.
-    </h4>
-    <div className="flex mobile:flex-col mobile:items-center mobile:gap-y-14 gap-x-[64px]">
-      {footerItems.map(({ item1, item2, item3, item4 }, index) => (
-        <div
-          key={index}
-          className="flex flex-col mobile:items-center gap-y-2"
-        >
-          <span
-            style={{ color: "rgba(0,0,0,.4)" }}
-            className="font-medium text-[17px]"
-          >
-            {item1}
-          </span>
-          <Link
-            href={item2.href}
-            className="font-medium text-[17px] text-black hover:opacity-70"
-          >
-            {item2.label}
-          </Link>
-          <Link
-            href={item3.href}
-            className="font-medium text-[17px] text-black hover:opacity-70"
-          >
-            {item3.label}
-          </Link>
-          <Link
-            href={item4.href}
-            className="font-medium text-[17px] text-black hover:opacity-70"
-          >
-            {item4.label}
-          </Link>
-        </div>
-      ))}
-    </div>
-  </div>
-  <h1
-    className={`${sacramento.className} leading-[200px] h-[500px] mobile:leading-[180px] mobile:h-[250px] text-[500px] mobile:text-[180px] overflow-hidden text-black`}
-  >
-    spacez
-  </h1>{" "}
-  <p className="mt-10 mb-2 mr-8 text-base pl-6 mobile:text-xs text-black">
-    ©2024 SPACEZ HOSPITALITY AND FOODS PRIVATE LIMITED. All rights reserved
-  </p> */
-}

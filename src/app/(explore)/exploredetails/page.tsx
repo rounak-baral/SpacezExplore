@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import "./explore.css";
 import React, { Suspense } from "react";
 import Link from "next/link";
-import Slider from "../components/Slider";
+// import Slider from "../components/Slider";
 import { useSearchParams } from "next/navigation";
-import Pattern from "../../../../assets/pngwing.com (1) 3.png";
 
 // Define types for TypeScript
 type CafeOrRestaurant = {
@@ -59,14 +59,18 @@ function ExploreDetailsContent() {
 
   return (
     <>
-      <Slider />
-      <div
-      style={{
-        backgroundImage: `url(${Pattern})`,
-        backgroundRepeat: "repeat",
-        backgroundSize: "contain", 
-      }}
-      className="w-screen mx-auto p-6">
+      {/* <Slider /> */}
+      <div className="w-full h-full " >
+      <div className="relative z-10 text-center pattern-bg py-20">
+        <h2 className="text-sm font-medium uppercase tracking-wider text-[#584139]">
+          Spacez Collections
+        </h2>
+        <h1 className="mt-1 text-4xl font-bold text-[#584139">
+          museums of bangalore
+        </h1>
+      </div>
+
+      <div className="w-screen mx-auto p-6">
         {/* Section Cards */}
         <div className="flex flex-wrap w-full justify-around items-start mb-16">
           {data && data.length > 0 ? (
@@ -117,6 +121,7 @@ function ExploreDetailsContent() {
           )}
         </div>
         <Footer />
+      </div>
       </div>
     </>
   );

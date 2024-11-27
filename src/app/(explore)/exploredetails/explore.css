@@ -1,0 +1,7 @@
+.pattern-bg {
+    background-image: url("../../../../assets/pngwing.com (1) 3.png");
+    background-repeat: repeat;
+    background-size: 8%; /* Adjust this value to control the size */
+    background-position: top center;
+    opacity: 1; /* Optional: Adjust opacity to tone down the lines */
+  }

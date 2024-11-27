@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import cafesData from "../../data.json"; // Ensure you have your JSON data here
 import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa6";
+import "../exploredetails/explore.css";
 import { Footer } from "../components/Footer";
 
 // Define types for TypeScript
@@ -232,7 +233,7 @@ function ExploreBlogsContent() {
             />
           </div>
           {/* Text Content */}
-          <div className="w-[50%] h-full mobile:w-full tab:w-full mobile:p-2 p-6 bg-white rounded-lg">
+          <div className="w-[50%] h-full mobile:w-full tab:w-full mobile:p-2 p-6 bg-transparent rounded-lg">
             <h1 className="text-3xl mobile:text-xl font-bold mb-2 text-[#342A28]">
               {item.name}
             </h1>

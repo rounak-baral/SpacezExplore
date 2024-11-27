@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "./slider.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -25,8 +26,8 @@ function Slider() {
     >
       {[...Array(1)].map((_, index) => (
         <SwiperSlide key={index}>
-          <div className="relative w-full mobile:h-[250px] h-[550px] bg-[#7F7F69] rounded-md overflow-hidden mb-16">
-            <div className="mobile:hidden relative w-full h-[550px] bg-[#7F7F69] rounded-md overflow-hidden mb-16 flex items-center justify-between px-10">
+          <div className="relative w-full pattern mobile:h-[250px] h-[550px] rounded-md overflow-hidden mb-16">
+            <div className="mobile:hidden relative w-full h-[550px] pattern bg-[#7F7F69] rounded-md overflow-hidden mb-16 flex items-center justify-between px-10">
               {/* Left section with text */}
               <div className="flex-1 px-28 mobile:px-3">
                 <h3 className="text-lg font-semibold text-white uppercase mb-2">
