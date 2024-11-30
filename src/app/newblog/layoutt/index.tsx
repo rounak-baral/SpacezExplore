@@ -5,28 +5,32 @@ interface BlogLayoutProps {
   title: string;
   description: string;
   imageUrl: string;
-  link: string; // Add link prop
+  link: string; 
 }
 
 const BlogLayout: React.FC<BlogLayoutProps> = ({ title, description, imageUrl, link }) => {
+  // Truncate description to 150 characters with ellipsis
+  const truncateDescription = (text: string, maxLength: number) => {
+    return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+  };
+
   return (
-    <Link href={link}>
-      <div className="border w-[400px] rounded-lg shadow-md p-4 flex flex-col md:flex-row items-center gap-4 hover:shadow-lg transition cursor-pointer">
-        {/* Image Section */}
-        <div className="">
+    <>
+      <div className="flex-none my-2 mx-2 rounded-[8px] w-[340px] overflow-hidden relative tab:w-[250px] smob:min-w-[150px] mobile:h-[220px] mobile:w-[170px]">
+        <Link href={link}>
           <img
             src={imageUrl}
             alt={title}
-            className="rounded-lg w-full h-auto object-cover"
+            className="w-[342px] h-[430px] rounded-[8px] object-cover tab:h-[300px] mobile:h-[250px]"
           />
-        </div>
-        {/* Content Section */}
-        <div className="flex flex-col w-full md:w-2/3">
-          <h2 className="text-xl font-bold text-gray-800">{title}</h2>
-          <p className="text-gray-600 mt-2">{description}</p>
-        </div>
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="absolute inset-0 flex flex-col justify-end p-4 text-white">
+            <h2 className="text-xl font-bold text-white">{title}</h2>
+            <p className="text-white mt-2">{truncateDescription(description, 100)}</p>
+          </div>
+        </Link>
       </div>
-    </Link>
+    </>
   );
 };
 
