@@ -25,7 +25,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, description, imageUrl, l
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-0 flex flex-col justify-end p-4 text-white">
-            <h2 className="text-xl font-bold text-white">{title}</h2>
+            <h1 className="text-xl font-bold text-white">{title}</h1>
             <p className="text-white mt-2">{truncateDescription(description, 100)}</p>
           </div>
         </Link>
