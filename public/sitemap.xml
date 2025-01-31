@@ -1,140 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"><script xmlns=""/>
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://explore.spacez.co/</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://explore.spacez.co/explorecollections</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://explore.spacez.co/exploredetails?category=cafes</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=restaurants</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=restobars</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=bars</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=breweries</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=streetfood</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=dessertparlors</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=bakeries</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=finedining</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=casualdining</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=buffetrestaurants</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=quickbites</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=foodcourts</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=themebasedeateries</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=rooftopdining</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=familyfriendlyrestaurants</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=petfriendlycafes</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=organiceateries</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=ethniccuisinerestaurants</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=veganvegetarianspots</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=winebars</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=teahouses</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://explore.spacez.co/exploredetails?category=fastfoodchains</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://explore.spacez.co/exploredetails</loc>
-  <lastmod>2024-11-08T17:51:17+00:00</lastmod>
+  <loc>https://explore.spacez.co/blogs/one-day-kerela-itinerary</loc>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore.spacez.co/blogs/coonoor-in-nilgiri-hills</loc>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore.spacez.co/blogs/discover-the-ease-of-coimbatore-airport</loc>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore.spacez.co/blogs/kodaikanal-hillstation-oasis</loc>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore.spacez.co/blogs/nammawoodland-guide-at-spacez</loc>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore.spacez.co/blogs/urban-escape-guide-at-spacez</loc>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore.spacez.co/blogs/waterfall-manor-at-spacez</loc>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore.spacez.co/blogs/top-hillstations-in-india</loc>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore.spacez.co/blogs/places-in-south-india</loc>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore.spacez.co/blogs/celebrate-diwaloween-at-spacez</loc>
+  <lastmod>2025-01-31T11:46:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
